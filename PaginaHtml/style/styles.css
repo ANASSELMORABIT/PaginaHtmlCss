@@ -1,0 +1,262 @@
+/* section styling */
+ 
+/* ------- Navigation Menu ---------- */
+#header {
+    background-color: rgb(1, 64, 82); 
+}
+
+.navbar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav-brand{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    align-self: center;
+    font-size: 32px;
+}
+
+.collapse{
+    align-self: center;
+}
+
+.nav-link {
+    font-size: 18px;
+    margin: 12px;
+    font-family: 'Poppins', sans-serif;
+    color: white; /* Color del texto en blanco */
+    text-decoration: none; 
+}
+
+.nav-link:hover{
+    color: var(--secondary-color);
+}
+.toggle-button{
+    font-size: 21px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    margin: 8px 10px;
+    display: none;
+}
+
+.toggle-button:focus{
+    outline: none;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Azul claro */
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Gris */
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:  rgb(1, 64, 82); /* Fondo claro */
+}
+
+/* Navbar */
+nav {
+    background-color: gray;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Contenedor de fotos con espacio a los lados */
+.photo-container {
+    display: flex;
+    justify-content: center; 
+    gap: 8px; 
+    margin: 10px auto; 
+    padding: 20px 40px;  
+    background-color: rgb(1, 64, 82);; 
+}
+
+.photo-item {
+    position: relative;
+    flex: 0 1 33%; 
+    background-color: black; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Texto dentro de la foto */
+.photo-item p {
+    position: absolute; 
+    top: 80%; 
+    left: 35%; 
+    transform: translate(-50%, -50%); 
+    margin: 0;
+    font-size: 20px; 
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%; 
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+.sidebar {
+    flex: 0 1 35%; 
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar-item img {
+    width: 100%; 
+    height: auto;
+}
+
+.sidebar-item p {
+    color: white; 
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+/* Main Photo Content Styles */
+.main-photo-content {
+    flex: 0 1 120%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgb(1, 64, 82); 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+}
+.image-title {
+    position: absolute;
+    top: -30px; 
+    left: 0;
+    width: 120%; 
+    color: black; 
+   
+    padding: 10px;
+    font-size: 18px;
+    text-align: center; 
+    z-index: 1; 
+}
+
+.main-item img {
+    width: 40%;
+    height: auto;
+    
+}
+
+.main-item p {
+    width: 90%; 
+    color: white;
+    font-size: 20px;
+    left: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .main-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-item img, .main-item p {
+        width: 100%;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .sidebar-item {
+        width: 48%;
+    }
+}
